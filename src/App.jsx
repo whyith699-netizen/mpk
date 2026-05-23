@@ -38,7 +38,7 @@ function PageWrapper({ children }) {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/mpk/">
       <Layout>
         <AnimatedRoutes />
       </Layout>
