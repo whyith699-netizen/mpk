@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -38,7 +38,7 @@ function PageWrapper({ children }) {
 
 function App() {
   return (
-    <Router basename="/mpk/">
+    <Router>
       <Layout>
         <AnimatedRoutes />
       </Layout>
