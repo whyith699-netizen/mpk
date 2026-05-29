@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Facebook, Youtube } from 'lucide-react';
 
 export default function Navbar() {
   return (
@@ -14,8 +15,12 @@ export default function Navbar() {
         <Link to="/contact" className="hover:opacity-80 transition-opacity">CONTACT</Link>
       </div>
       <div className="flex gap-4">
-        <a href="#" className="w-8 h-8 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transition-colors">f</a>
-        <a href="#" className="w-8 h-8 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transition-colors">y</a>
+        <a href="#" className="w-8 h-8 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transition-colors">
+          <Facebook size={16} />
+        </a>
+        <a href="#" className="w-8 h-8 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transition-colors">
+          <Youtube size={16} />
+        </a>
       </div>
     </nav>
   );
