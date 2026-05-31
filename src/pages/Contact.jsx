@@ -1,4 +1,12 @@
 import { motion } from 'framer-motion';
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+
+const SOCIAL_LINKS = [
+  { id: 'facebook', icon: <Facebook size={24} /> },
+  { id: 'twitter', icon: <Twitter size={24} /> },
+  { id: 'instagram', icon: <Instagram size={24} /> },
+  { id: 'youtube', icon: <Youtube size={24} /> }
+];
 
 export default function Contact() {
   return (
@@ -22,9 +30,9 @@ export default function Contact() {
             <p className="text-2xl font-black uppercase underline">halo@mpkschool.id</p>
           </div>
           <div className="flex gap-4 pt-4">
-            {['f', 't', 'i', 'y'].map((s) => (
-              <div key={s} className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-brand-orange transition-colors cursor-pointer text-xl font-black">
-                {s}
+            {SOCIAL_LINKS.map(({ id, icon }) => (
+              <div key={id} className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center hover:bg-brand-orange transition-colors cursor-pointer text-xl font-black">
+                {icon}
               </div>
             ))}
           </div>
