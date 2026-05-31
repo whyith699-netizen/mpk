@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import IsometricBlock from '../components/IsometricBlock';
+import logoMpk from '../assets/logo-mpk.svg';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           className="mb-8 flex justify-center md:justify-start"
         >
-          <img src="/logo-mpk.svg" alt="Logo MPK" className="w-24 h-24 object-contain" />
+          <img src={logoMpk} alt="Logo MPK" className="w-24 h-24 object-contain" />
         </motion.div>
         <motion.p
           initial={{ opacity: 0 }}
