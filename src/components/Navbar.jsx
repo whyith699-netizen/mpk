@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-brand-red/90 backdrop-blur-md border-b border-white/10 px-6 py-4 flex justify-between items-center">
       <Link to="/" className="text-xl font-bold flex items-center gap-2">
-        <img src="/logo-mpk.png" alt="Logo MPK" className="w-10 h-10 object-contain shrink-0 rounded-lg bg-white p-0.5" />
+        <img src="/logo-mpk.svg" alt="Logo MPK" className="w-10 h-10 object-contain shrink-0 rounded-lg bg-white p-0.5" />
         <span className="leading-tight">Majelis Permusyawaratan Kelas</span>
       </Link>
       <div className="hidden md:flex gap-8 font-medium">

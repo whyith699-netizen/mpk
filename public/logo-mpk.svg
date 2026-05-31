@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Left Wreath Leaf (Single chevron style matching the original) -->
+    <g id="leaf">
+      <path d="M 0,0 C -12,-10 -25,-12 -30,-8 C -32,-3 -25,12 0,0 Z" fill="#FFD700" stroke="#D4AF37" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M -5,-3 C -12,-8 -18,-8 -20,-6 C -21,-4 -18,4 -5,-3 Z" fill="#FFF2A3" />
+    </g>
+    
+    <!-- Paths for arched text -->
+    <!-- Top Text Path (Arch for "M P K") -->
+    <path id="text-path-mpk" d="M 125,125 C 150,105 250,105 275,125" fill="none"/>
+    <!-- Bottom Text Path (Arch for "SMA NEGERI 1 KLATEN") -->
+    <path id="text-path-school" d="M 140,250 C 160,270 240,270 260,250" fill="none"/>
+  </defs>
+
+  <!-- Outer Wreath (Rice and Cotton / Golden Leaves) -->
+  <!-- Left Wreath Branch -->
+  <g id="left-wreath">
+    <!-- Wreath stem -->
+    <path d="M 200,340 C 110,330 50,260 50,170 C 50,110 80,60 120,40" fill="none" stroke="#FFC90E" stroke-width="4.5" stroke-linecap="round"/>
+    
+    <!-- Leaves placed along the branch -->
+    <use href="#leaf" x="180" y="338" transform="rotate(-15 180 338) scale(0.8)"/>
+    <use href="#leaf" x="150" y="325" transform="rotate(-25 150 325) scale(0.85)"/>
+    <use href="#leaf" x="120" y="300" transform="rotate(-40 120 300) scale(0.9)"/>
+    <use href="#leaf" x="95" y="270" transform="rotate(-55 95 270) scale(0.95)"/>
+    <use href="#leaf" x="75" y="235" transform="rotate(-70 75 235) scale(1)"/>
+    <use href="#leaf" x="62" y="195" transform="rotate(-85 62 195) scale(1.05)"/>
+    <use href="#leaf" x="58" y="155" transform="rotate(-100 58 155) scale(1.05)"/>
+    <use href="#leaf" x="65" y="115" transform="rotate(-115 65 115) scale(1)"/>
+    <use href="#leaf" x="80" y="80" transform="rotate(-130 80 80) scale(0.95)"/>
+    <use href="#leaf" x="105" y="52" transform="rotate(-145 105 52) scale(0.9)"/>
+    <use href="#leaf" x="135" y="35" transform="rotate(-160 135 35) scale(0.85)"/>
+  </g>
+  
+  <!-- Right Wreath (Mirrored from Left) -->
+  <use href="#left-wreath" transform="translate(400, 0) scale(-1, 1)"/>
+
+  <!-- Shield Base (Orange border, black outline, yellow center) -->
+  <!-- Outer black outline of shield -->
+  <path d="M 200,95 C 170,82 135,78 110,80 C 105,170 120,240 200,290 C 280,240 295,170 290,80 C 265,78 230,82 200,95 Z" 
+        fill="#FF8A00" stroke="#000000" stroke-width="2.5" stroke-linejoin="round"/>
+        
+  <!-- Inner yellow shield -->
+  <path d="M 200,101 C 172,89 139,85 115,87 C 110,169 124,233 200,280 C 276,233 290,169 285,87 C 261,85 228,89 200,101 Z" 
+        fill="#FFF955" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Curved Text: M P K -->
+  <text font-family="'Times New Roman', Georgia, serif" font-weight="900" font-size="28" letter-spacing="8" fill="#000000">
+    <textPath href="#text-path-mpk" startOffset="50%" text-anchor="middle">MPK</textPath>
+  </text>
+  
+  <!-- Subtitle: MAJELIS PERMUSYAWARATAN KELAS -->
+  <text x="200" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="6.5" letter-spacing="0.8" fill="#000000" text-anchor="middle">
+    MAJELIS PERMUSYAWARATAN KELAS
+  </text>
+
+  <!-- Central Wayang Gunungan (Red Shape) -->
+  <path d="M 200,152 
+           C 203,160 208,165 214,170 
+           C 212,175 209,178 217,185 
+           C 215,190 212,193 222,204 
+           C 222,209 220,213 220,216 
+           L 180,216 
+           C 180,213 178,209 178,204 
+           C 188,193 185,190 183,185 
+           C 191,178 188,175 186,170 
+           C 192,165 197,160 200,152 Z" 
+        fill="#D60000" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Gold Emblem (Balance/Scale) inside Gunungan -->
+  <!-- Vertical pillar -->
+  <line x1="200" y1="162" x2="200" y2="212" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Pillar base -->
+  <polygon points="194,212 206,212 200,205" fill="#FFD700"/>
+  <!-- Crossbar -->
+  <path d="M 188,176 Q 200,172 212,176" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Left Scale Pan -->
+  <line x1="188" y1="176" x2="184" y2="194" stroke="#FFD700" stroke-width="1"/>
+  <line x1="188" y1="176" x2="192" y2="194" stroke="#FFD700" stroke-width="1"/>
+  <path d="M 182,194 Q 188,198 194,194 Z" fill="#FFD700" stroke="#CC9900" stroke-width="0.75"/>
+  <!-- Right Scale Pan -->
+  <line x1="212" y1="176" x2="208" y2="194" stroke="#FFD700" stroke-width="1"/>
+  <line x1="212" y1="176" x2="216" y2="194" stroke="#FFD700" stroke-width="1"/>
+  <path d="M 206,194 Q 212,198 218,194 Z" fill="#FFD700" stroke="#CC9900" stroke-width="0.75"/>
+  
+  <!-- Green Lotus base -->
+  <!-- Left outer leaf -->
+  <path d="M 184,216 C 172,218 168,228 174,233 C 182,231 185,224 184,216 Z" fill="#008A2E" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Right outer leaf -->
+  <path d="M 216,216 C 228,218 232,228 226,233 C 218,231 215,224 216,216 Z" fill="#008A2E" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Left inner leaf -->
+  <path d="M 194,216 C 186,220 183,230 190,235 C 196,233 197,224 194,216 Z" fill="#00B33C" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Right inner leaf -->
+  <path d="M 206,216 C 214,220 217,230 210,235 C 204,233 203,224 206,216 Z" fill="#00B33C" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Center leaf -->
+  <path d="M 200,216 C 195,222 195,233 200,237 C 205,233 205,222 200,216 Z" fill="#00E64D" stroke="#000000" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <!-- Curved Text: SMA NEGERI 1 KLATEN -->
+  <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="10" letter-spacing="1.2" fill="#000000">
+    <textPath href="#text-path-school" startOffset="50%" text-anchor="middle">SMA NEGERI 1 KLATEN</textPath>
+  </text>
+</svg>
