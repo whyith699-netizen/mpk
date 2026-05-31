@@ -38,7 +38,8 @@ function PageWrapper({ children }) {
 
 function App() {
   return (
-    <Router >
+    <Router>
+    <Router>
       <Layout>
         <AnimatedRoutes />
       </Layout>
