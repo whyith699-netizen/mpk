@@ -13,7 +13,8 @@ export default function Footer() {
           <Link to="/" className="hover:opacity-80">HOME</Link>
           <Link to="/works" className="hover:opacity-80">WORKS</Link>
           <Link to="/about" className="hover:opacity-80">ABOUT</Link>
-          <Link to="/berita" className="hover:opacity-80">BERITA</Link>
+          <Link to="/struktur" className="hover:opacity-80">STRUKTUR</Link>
+          <Link to="/news" className="hover:opacity-80">NEWS</Link>
           <Link to="/contact" className="hover:opacity-80">CONTACT</Link>
         </div>
         <div className="text-xs opacity-50">

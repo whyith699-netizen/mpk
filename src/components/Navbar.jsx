@@ -9,11 +9,12 @@ export default function Navbar() {
         <img src={logoMpk} alt="Logo MPK" className="w-10 h-10 object-contain shrink-0 rounded-lg bg-white p-0.5" />
         <span className="leading-tight">Majelis Permusyawaratan Kelas</span>
       </Link>
-      <div className="hidden md:flex gap-8 font-medium">
+      <div className="hidden md:flex gap-8 font-medium text-sm">
         <Link to="/" className="hover:opacity-80 transition-opacity">HOME</Link>
         <Link to="/works" className="hover:opacity-80 transition-opacity">WORKS</Link>
         <Link to="/about" className="hover:opacity-80 transition-opacity">ABOUT</Link>
-        <Link to="/berita" className="hover:opacity-80 transition-opacity">BERITA</Link>
+        <Link to="/struktur" className="hover:opacity-80 transition-opacity">STRUKTUR</Link>
+        <Link to="/news" className="hover:opacity-80 transition-opacity">NEWS</Link>
         <Link to="/contact" className="hover:opacity-80 transition-opacity">CONTACT</Link>
       </div>
       <div className="flex gap-4">

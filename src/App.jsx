@@ -6,6 +6,7 @@ import About from './pages/About';
 import Works from './pages/Works';
 import Kegiatan from './pages/Kegiatan';
 import Contact from './pages/Contact';
+import Struktur from './pages/Struktur';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -16,7 +17,8 @@ function AnimatedRoutes() {
         <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
         <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
         <Route path="/works" element={<PageWrapper><Works /></PageWrapper>} />
-        <Route path="/berita" element={<PageWrapper><Kegiatan /></PageWrapper>} />
+        <Route path="/news" element={<PageWrapper><Kegiatan /></PageWrapper>} />
+        <Route path="/struktur" element={<PageWrapper><Struktur /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
       </Routes>
     </AnimatePresence>

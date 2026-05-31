@@ -9,9 +9,9 @@ export default function Kegiatan() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-black mb-4 uppercase">Kegiatan & Berita</h2>
+        <h2 className="text-4xl font-black mb-4 uppercase">News & Events</h2>
         <div className="w-24 h-1 bg-brand-orange mx-auto mb-6"></div>
-        <p className="text-lg opacity-80">Informasi terbaru mengenai aktivitas dan kebijakan MPK.</p>
+        <p className="text-lg opacity-80">Informasi terbaru mengenai aktivitas, berita, dan kebijakan MPK.</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -32,7 +32,7 @@ export default function Kegiatan() {
             )}
             <div className="flex justify-between items-start mb-6">
               <span className="text-xs font-black tracking-widest text-brand-orange bg-brand-orange/10 px-3 py-1 rounded-full">
-                {item.category}
+                {item.category === 'BERITA' ? 'NEWS' : 'EVENTS'}
               </span>
               <span className="text-sm font-bold opacity-50">{item.date}</span>
             </div>
@@ -80,7 +80,7 @@ export default function Kegiatan() {
 
               {/* Category Badge */}
               <span className="inline-flex items-center gap-1.5 text-xs font-black tracking-widest text-brand-orange bg-brand-orange/10 px-4 py-1.5 rounded-full mb-6 uppercase">
-                {selectedKegiatan.category}
+                {selectedKegiatan.category === 'BERITA' ? 'NEWS' : 'EVENTS'}
               </span>
 
               {/* Title */}
