@@ -3,32 +3,32 @@ import WorkCard from '../components/WorkCard';
 const PROKERS = [
   {
     title: "Pemilihan Ketua OSIS",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Penyelenggaraan pemilihan ketua OSIS masa bakti 2026/2027 secara demokratis, adil, transparan, dan terbuka bagi seluruh siswa.",
     status: "SELESAI"
   },
   {
     title: "Forum Aspirasi Siswa",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: "Penyaluran dan diskusi aspirasi siswa secara berkala dengan pihak sekolah untuk meningkatkan sarana prasarana serta kenyamanan belajar.",
     status: "BERJALAN"
   },
   {
     title: "Latihan Kepemimpinan",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    description: "Pembekalan karakter kepemimpinan, kepribadian, serta manajemen organisasi bagi pengurus baru MPK dan OSIS.",
     status: "TERENCANA"
   },
   {
     title: "Sidang Paripurna MPK",
-    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    description: "Sidang pleno resmi untuk menetapkan Anggaran Dasar/Anggaran Rumah Tangga (AD/ART) serta laporan pertanggungjawaban program kerja.",
     status: "BERJALAN"
   },
   {
     title: "MPK Awards 2026",
-    description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.",
+    description: "Penghargaan tahunan dari MPK sebagai bentuk apresiasi bagi kelas teraktif serta ekstrakurikuler paling kreatif dan berprestasi.",
     status: "TERENCANA"
   },
   {
     title: "Studi Banding Organisasi",
-    description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+    description: "Kunjungan kemitraan ke sekolah-sekolah unggulan lain untuk berbagi pengalaman, wawasan, serta inovasi program kerja organisasi.",
     status: "SELESAI"
   }
 ];

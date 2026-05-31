@@ -23,11 +23,11 @@ export default function Contact() {
         <div className="space-y-8">
           <div>
             <p className="text-xs font-black tracking-widest text-brand-orange mb-2 uppercase">Lokasi Kami</p>
-            <p className="text-2xl font-black uppercase">Jl. Pendidikan No. 123,<br />Kota Inspirasi</p>
+            <p className="text-2xl font-black uppercase">Jl. Merbabu No. 13,<br />Gayamprit, Klaten</p>
           </div>
           <div>
             <p className="text-xs font-black tracking-widest text-brand-orange mb-2 uppercase">Email</p>
-            <p className="text-2xl font-black uppercase underline">halo@mpkschool.id</p>
+            <p className="text-2xl font-black uppercase underline">mpk@sman1klaten.sch.id</p>
           </div>
           <div className="flex gap-4 pt-4">
             {SOCIAL_LINKS.map(({ id, icon }) => (
@@ -48,11 +48,11 @@ export default function Contact() {
         <form className="space-y-6">
           <div>
             <label className="block text-[10px] font-black uppercase tracking-widest mb-2 opacity-50">Nama Lengkap</label>
-            <input type="text" className="w-full bg-gray-100 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-red transition-all" placeholder="Lorem Ipsum" />
+            <input type="text" className="w-full bg-gray-100 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-red transition-all" placeholder="Budi Santoso" />
           </div>
           <div>
             <label className="block text-[10px] font-black uppercase tracking-widest mb-2 opacity-50">Kelas</label>
-            <input type="text" className="w-full bg-gray-100 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-red transition-all" placeholder="X MIPA 1" />
+            <input type="text" className="w-full bg-gray-100 border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-brand-red transition-all" placeholder="XI MIPA 3" />
           </div>
           <div>
             <label className="block text-[10px] font-black uppercase tracking-widest mb-2 opacity-50">Pesan / Aspirasi</label>
