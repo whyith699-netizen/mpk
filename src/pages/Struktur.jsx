@@ -1,24 +1,43 @@
 import { motion } from 'framer-motion';
-import { Shield, Users, Award, Briefcase, Mail } from 'lucide-react';
+import { Shield, Users, Award, Briefcase, Mail, User } from 'lucide-react';
+
+function BlankAvatar({ size = "w-20 h-20", variant = "orange" }) {
+  let bgGradient = "from-brand-orange/10 to-brand-red/10";
+  let borderStyle = "border-2 border-brand-orange/20";
+  let iconColor = "text-brand-orange/60";
+
+  if (variant === "white") {
+    bgGradient = "from-white/5 to-white/15";
+    borderStyle = "border-2 border-white/20";
+    iconColor = "text-white/60";
+  } else if (variant === "red") {
+    bgGradient = "from-brand-red/10 to-brand-orange/10";
+    borderStyle = "border-2 border-brand-red/20";
+    iconColor = "text-brand-red/60";
+  }
+
+  return (
+    <div className={`${size} rounded-full bg-gradient-to-br ${bgGradient} ${borderStyle} flex items-center justify-center shadow-inner relative overflow-hidden`}>
+      <User className={`w-[45%] h-[45%] ${iconColor}`} />
+    </div>
+  );
+}
 
 const PENGURUS_INTI = {
   ketua: {
     name: "Muhammad Fauzan",
     role: "Ketua Umum",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
     email: "fauzan.ketum@sman1klaten.sch.id"
   },
   wakil: [
     {
       name: "Naura Salsabila",
       role: "Wakil Ketua I",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
       email: "naura.wakahub@sman1klaten.sch.id"
     },
     {
       name: "Rian Hidayat",
       role: "Wakil Ketua II",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
       email: "rian.waka@sman1klaten.sch.id"
     }
   ],
@@ -26,24 +45,20 @@ const PENGURUS_INTI = {
     {
       name: "Siti Rahayu",
       role: "Sekretaris I",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
     },
     {
       name: "Sonia Fitriani",
       role: "Sekretaris II",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80",
     }
   ],
   bendahara: [
     {
       name: "Amanda Larasati",
       role: "Bendahara I",
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&h=200&q=80",
     },
     {
       name: "Budi Santoso",
       role: "Bendahara II",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&h=200&q=80",
     }
   ]
 };
@@ -53,7 +68,6 @@ const KOMISI = [
     id: 1,
     name: "Komisi A (Aspirasi)",
     coordinator: "Aditya Pratama",
-    coordinatorImage: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&h=150&q=80",
     desc: "Menjembatani dan menampung aspirasi siswa untuk disampaikan kepada pihak sekolah.",
     members: ["Farhan", "Rara", "Dwi", "Lutfi"]
   },
@@ -61,7 +75,6 @@ const KOMISI = [
     id: 2,
     name: "Komisi B (Pengawasan)",
     coordinator: "Dewi Lestari",
-    coordinatorImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
     desc: "Mengawasi jalannya kinerja program kerja OSIS agar sesuai dengan AD/ART.",
     members: ["Hadi", "Gita", "Yusuf", "Maya"]
   },
@@ -69,7 +82,6 @@ const KOMISI = [
     id: 3,
     name: "Komisi C (Publikasi)",
     coordinator: "Dimas Saputra",
-    coordinatorImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80",
     desc: "Mengelola media komunikasi resmi MPK dan mempublikasikan info serta berita sekolah.",
     members: ["Andi", "Mega", "Fajar", "Dhea"]
   },
@@ -77,11 +89,11 @@ const KOMISI = [
     id: 4,
     name: "Komisi D (Hukum)",
     coordinator: "Putri Handayani",
-    coordinatorImage: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=150&h=150&q=80",
     desc: "Merumuskan ketetapan peraturan organisasi dan mengkaji produk hukum sekolah.",
     members: ["Tio", "Nisa", "Zaki", "Sari"]
   }
 ];
+
 
 export default function Struktur() {
   const cardVariants = {
@@ -112,8 +124,8 @@ export default function Struktur() {
           className="flex flex-col items-center z-10"
         >
           <div className="bg-white rounded-[2.5rem] p-6 shadow-2xl text-brand-red flex flex-col items-center w-64 border-2 border-brand-orange hover:shadow-[0_15px_30px_rgba(255,165,0,0.3)] transition-all transform hover:-translate-y-1">
-            <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-brand-orange/30 shadow-inner">
-              <img src={PENGURUS_INTI.ketua.image} alt={PENGURUS_INTI.ketua.name} className="w-full h-full object-cover" />
+            <div className="mb-4">
+              <BlankAvatar size="w-24 h-24" variant="orange" />
             </div>
             <h3 className="text-lg font-black uppercase text-center leading-tight mb-1">{PENGURUS_INTI.ketua.name}</h3>
             <span className="text-xs font-black tracking-widest text-brand-orange bg-brand-orange/10 px-3 py-1 rounded-full uppercase mb-3">
@@ -141,8 +153,8 @@ export default function Struktur() {
               className="flex flex-col items-center"
             >
               <div className="bg-white rounded-[2rem] p-6 shadow-2xl text-brand-red flex flex-col items-center w-60 border border-brand-orange/20 hover:shadow-[0_15px_25px_rgba(255,165,0,0.15)] transition-all transform hover:-translate-y-1">
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-brand-orange/30 shadow-inner">
-                  <img src={waka.image} alt={waka.name} className="w-full h-full object-cover" />
+                <div className="mb-3">
+                  <BlankAvatar size="w-20 h-20" variant="orange" />
                 </div>
                 <h4 className="text-md font-black uppercase text-center leading-tight mb-1">{waka.name}</h4>
                 <span className="text-[10px] font-black tracking-widest text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded-full uppercase mb-2">
@@ -173,8 +185,8 @@ export default function Struktur() {
               className="flex flex-col items-center"
             >
               <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-[2rem] p-5 flex flex-col items-center w-full max-w-[220px] hover:bg-white/15 transition-all">
-                <div className="w-16 h-16 rounded-full overflow-hidden mb-3 border-2 border-white/20">
-                  <img src={sek.image} alt={sek.name} className="w-full h-full object-cover" />
+                <div className="mb-3">
+                  <BlankAvatar size="w-16 h-16" variant="white" />
                 </div>
                 <h5 className="text-sm font-black uppercase text-center leading-tight mb-1">{sek.name}</h5>
                 <span className="text-[9px] font-black tracking-widest text-brand-orange bg-brand-orange/20 px-2.5 py-0.5 rounded-full uppercase">
@@ -195,8 +207,8 @@ export default function Struktur() {
               className="flex flex-col items-center"
             >
               <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-[2rem] p-5 flex flex-col items-center w-full max-w-[220px] hover:bg-white/15 transition-all">
-                <div className="w-16 h-16 rounded-full overflow-hidden mb-3 border-2 border-white/20">
-                  <img src={bend.image} alt={bend.name} className="w-full h-full object-cover" />
+                <div className="mb-3">
+                  <BlankAvatar size="w-16 h-16" variant="white" />
                 </div>
                 <h5 className="text-sm font-black uppercase text-center leading-tight mb-1">{bend.name}</h5>
                 <span className="text-[9px] font-black tracking-widest text-brand-orange bg-brand-orange/20 px-2.5 py-0.5 rounded-full uppercase">
@@ -232,8 +244,8 @@ export default function Struktur() {
                 
                 {/* Coordinator Avatar */}
                 <div className="flex flex-col items-center shrink-0">
-                  <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-4 border-brand-red/10 shadow-inner">
-                    <img src={kom.coordinatorImage} alt={kom.coordinator} className="w-full h-full object-cover" />
+                  <div className="mb-3">
+                    <BlankAvatar size="w-20 h-20" variant="red" />
                   </div>
                   <h5 className="text-xs font-black uppercase text-center leading-tight max-w-[120px]">{kom.coordinator}</h5>
                   <span className="text-[8px] font-black tracking-widest text-brand-orange bg-brand-orange/10 px-2 py-0.5 rounded-full uppercase mt-1">
