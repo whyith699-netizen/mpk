@@ -67,6 +67,15 @@ export default function Works() {
                 {selectedProker.title}
               </h3>
 
+              {/* Image */}
+              {selectedProker.image && (
+                <img 
+                  src={selectedProker.image} 
+                  alt={selectedProker.title} 
+                  className="w-full h-48 md:h-64 object-cover rounded-3xl mb-6 shadow-md"
+                />
+              )}
+
               {/* Meta Info */}
               <div className="grid sm:grid-cols-2 gap-4 border-t border-b border-gray-100 py-4 mb-6 text-sm text-gray-600 font-medium">
                 <div className="flex items-center gap-2">

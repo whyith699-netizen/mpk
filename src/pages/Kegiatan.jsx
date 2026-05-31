@@ -25,6 +25,11 @@ export default function Kegiatan() {
             onClick={() => setSelectedKegiatan(item)}
             className="group bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-colors flex flex-col h-full cursor-pointer hover:border-brand-orange/40 hover:shadow-lg"
           >
+            {item.image && (
+              <div className="w-full h-48 bg-white/5 rounded-2xl mb-6 overflow-hidden">
+                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+            )}
             <div className="flex justify-between items-start mb-6">
               <span className="text-xs font-black tracking-widest text-brand-orange bg-brand-orange/10 px-3 py-1 rounded-full">
                 {item.category}
@@ -82,6 +87,15 @@ export default function Kegiatan() {
               <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight leading-none mb-6 pr-8">
                 {selectedKegiatan.title}
               </h3>
+
+              {/* Image */}
+              {selectedKegiatan.image && (
+                <img 
+                  src={selectedKegiatan.image} 
+                  alt={selectedKegiatan.title} 
+                  className="w-full h-48 md:h-64 object-cover rounded-3xl mb-6 shadow-md"
+                />
+              )}
 
               {/* Meta Info */}
               <div className="grid grid-cols-3 gap-2 border-t border-b border-gray-100 py-4 mb-6 text-xs md:text-sm text-gray-600 font-medium">

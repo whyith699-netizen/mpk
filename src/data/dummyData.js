@@ -6,6 +6,7 @@ export const PROKERS = [
     status: "SELESAI",
     date: "12 April 2026",
     pic: "Komisi B (Pengawasan)",
+    image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=600&q=80",
     details: "Kegiatan ini merupakan puncak pesta demokrasi siswa di SMAN 1 Klaten. Seluruh rangkaian acara mulai dari verifikasi berkas calon, debat visi-misi, masa kampanye, hingga pemungutan suara secara elektronik (e-voting) diselenggarakan secara profesional oleh panitia ad-hoc di bawah pengawasan ketat Komisi B MPK. Tingkat partisipasi pemilih tahun ini mencapai 98.7%."
   },
   {
@@ -15,6 +16,7 @@ export const PROKERS = [
     status: "BERJALAN",
     date: "Setiap Tengah Semester",
     pic: "Komisi A (Aspirasi)",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80",
     details: "Forum berkala yang mempertemukan perwakilan kelas dengan Kepala Sekolah dan jajaran Wakil Kepala Sekolah. Komisi A MPK bertugas mengumpulkan kuesioner aspirasi dari tiap kelas, melakukan tabulasi data, dan mempresentasikannya di forum untuk dicarikan solusi terbaik bersama pihak manajemen sekolah."
   },
   {
@@ -24,6 +26,7 @@ export const PROKERS = [
     status: "TERENCANA",
     date: "18-20 Juli 2026",
     pic: "BPH & Komisi C",
+    image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80",
     details: "Latihan Dasar Kepemimpinan (LDK) tahunan yang dirancang untuk melatih kedisiplinan, pemecahan masalah, kemampuan komunikasi publik, serta kerja sama tim bagi calon pengurus organisasi periode berikutnya. Acara akan menghadirkan alumni serta pemateri profesional di bidang kepemimpinan pemuda."
   },
   {
@@ -33,6 +36,7 @@ export const PROKERS = [
     status: "BERJALAN",
     date: "Juni & November 2026",
     pic: "Badan Pengurus Harian (BPH)",
+    image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=600&q=80",
     details: "Sidang resmi tertinggi yang dihadiri oleh seluruh anggota MPK dan perwakilan pengurus OSIS. Agenda sidang meliputi evaluasi laporan pertanggungjawaban program kerja OSIS tengah tahun, pembahasan amendemen tata tertib organisasi, serta pengesahan regulasi baru."
   },
   {
@@ -42,6 +46,7 @@ export const PROKERS = [
     status: "TERENCANA",
     date: "14 Desember 2026",
     pic: "Komisi C (Publikasi)",
+    image: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=600&q=80",
     details: "Program penghargaan bergengsi bagi siswa dan organisasi internal sekolah. Penilaian dilakukan sepanjang tahun berdasarkan keaktifan kelas dalam menyalurkan aspirasi, kedisiplinan administrasi ekstrakurikuler, serta prestasi yang disumbangkan untuk nama baik sekolah."
   },
   {
@@ -51,6 +56,7 @@ export const PROKERS = [
     status: "SELESAI",
     date: "2 Februari 2026",
     pic: "Badan Pengurus Harian (BPH)",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80",
     details: "Kunjungan kerja ke SMA Negeri 3 Yogyakarta dalam rangka bertukar pikiran mengenai sistem legislasi siswa, mekanisme pengawasan organisasi, serta optimalisasi media publikasi digital. Hasil studi banding diimplementasikan dalam revisi SOP administrasi MPK."
   }
 ];
@@ -64,6 +70,7 @@ export const KEGIATAN = [
     excerpt: "Membahas evaluasi program kerja dan penetapan ketetapan baru untuk semester genap.",
     author: "Humas MPK",
     readTime: "4 Menit",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80",
     content: "Sidang Paripurna Semester Genap SMAN 1 Klaten sukses diselenggarakan di Aula Utama. Sidang yang dipimpin oleh Ketua Umum MPK ini dihadiri oleh 40 perwakilan kelas dan seluruh pengurus inti OSIS. Agenda utama sidang meliputi pembacaan Laporan Pertanggungjawaban (LPJ) Tengah Tahun oleh Ketua OSIS, diikuti dengan sesi pandangan umum serta evaluasi kritis dari masing-masing Komisi MPK. Beberapa rekomendasi penting berhasil disahkan, terutama terkait optimalisasi dana kegiatan ekstrakurikuler dan penyesuaian jadwal program kerja pasca-ujian."
   },
   {
@@ -74,6 +81,7 @@ export const KEGIATAN = [
     excerpt: "Menyerap aspirasi dari seluruh perwakilan kelas mengenai fasilitas sekolah.",
     author: "Komisi A (Aspirasi)",
     readTime: "3 Menit",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80",
     content: "Komisi A MPK mengadakan Forum Aspirasi Siswa Terbuka (FAST) yang menjembatani komunikasi langsung antara siswa dengan pihak sarana prasarana sekolah. Bertempat di ruang multimedia, perwakilan tiap kelas menyampaikan keluhan dan saran mengenai perbaikan fasilitas laboratorium komputer, kebersihan kantin, serta penambahan bandwidth WiFi sekolah. Kepala Sekolah menyambut baik forum ini dan menjanjikan langkah perbaikan bertahap dalam kurun waktu satu bulan ke depan."
   },
   {
@@ -84,6 +92,7 @@ export const KEGIATAN = [
     excerpt: "Kunjungan ke SMA unggulan untuk mempelajari sistem manajerial organisasi siswa.",
     author: "BPH MPK",
     readTime: "5 Menit",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80",
     content: "Pengurus Harian MPK dan OSIS SMAN 1 Klaten melakukan perjalanan studi banding ke SMA Negeri 3 Yogyakarta. Kunjungan ini difokuskan pada studi komparatif manajemen sistem e-voting pemilihan umum siswa dan tata cara persidangan legislatif siswa. Diskusi interaktif antar komisi berlangsung hangat, menghasilkan banyak wawasan baru mengenai pengelolaan program kerja berbasis digital yang lebih transparan dan efisien."
   },
   {
@@ -94,6 +103,7 @@ export const KEGIATAN = [
     excerpt: "Pembahasan detail per komisi mengenai target kuartal kedua.",
     author: "Sekretariat MPK",
     readTime: "2 Menit",
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80",
     content: "Dalam rangka menyambut pertengahan tahun kepengurusan, seluruh komisi MPK menggelar Rapat Pleno internal. Rapat ini bertujuan untuk memetakan capaian program kerja, mengidentifikasi kendala koordinasi lapangan, serta mematangkan persiapan draf peraturan organisasi baru yang akan diajukan pada sidang paripurna mendatang. Masing-masing ketua komisi menyatakan optimisme bahwa semua target kuartal kedua akan selesai tepat waktu."
   }
 ];

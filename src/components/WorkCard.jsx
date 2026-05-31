@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function WorkCard({ title, description, status, index, onClick }) {
+export default function WorkCard({ title, description, status, index, onClick, image }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -11,7 +11,11 @@ export default function WorkCard({ title, description, status, index, onClick })
       className="bg-white rounded-3xl p-6 shadow-2xl text-brand-red flex flex-col h-full cursor-pointer group/card hover:shadow-[0_15px_30px_rgba(255,165,0,0.2)] transition-shadow duration-300"
     >
       <div className="w-full h-40 bg-brand-red/10 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden group">
-        <div className="text-4xl font-black opacity-20 group-hover/card:scale-110 transition-transform">MPK</div>
+        {image ? (
+          <img src={image} alt={title} className="w-full h-full object-cover group-hover/card:scale-115 transition-transform duration-500" />
+        ) : (
+          <div className="text-4xl font-black opacity-20 group-hover/card:scale-110 transition-transform">MPK</div>
+        )}
         <div className="absolute top-4 right-4 bg-brand-orange text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
           {status}
         </div>
