@@ -1,13 +1,11 @@
-import { motion } from 'framer-motion';
-
-const KEGIATAN = [
-  { date: "20 Mei 2026", title: "Sidang Paripurna Semester Genap", category: "BERITA", excerpt: "Membahas evaluasi program kerja dan penetapan ketetapan baru untuk semester genap." },
-  { date: "15 Mei 2026", title: "Forum Aspirasi Siswa Terbuka", category: "KEGIATAN", excerpt: "Menyerap aspirasi dari seluruh perwakilan kelas mengenai fasilitas sekolah." },
-  { date: "02 Mei 2026", title: "Studi Banding Organisasi ke Luar Kota", category: "KEGIATAN", excerpt: "Kunjungan ke SMA unggulan untuk mempelajari sistem manajerial organisasi siswa." },
-  { date: "28 Apr 2026", title: "Rapat Pleno Komisi", category: "BERITA", excerpt: "Pembahasan detail per komisi mengenai target kuartal kedua." }
-];
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Calendar, User, Clock } from 'lucide-react';
+import { KEGIATAN } from '../data/dummyData';
 
 export default function Kegiatan() {
+  const [selectedKegiatan, setSelectedKegiatan] = useState(null);
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <div className="text-center mb-16">
@@ -19,12 +17,13 @@ export default function Kegiatan() {
       <div className="grid md:grid-cols-2 gap-8">
         {KEGIATAN.map((item, index) => (
           <motion.div
-            key={index}
+            key={item.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-colors flex flex-col h-full"
+            onClick={() => setSelectedKegiatan(item)}
+            className="group bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-colors flex flex-col h-full cursor-pointer hover:border-brand-orange/40 hover:shadow-lg"
           >
             <div className="flex justify-between items-start mb-6">
               <span className="text-xs font-black tracking-widest text-brand-orange bg-brand-orange/10 px-3 py-1 rounded-full">
@@ -38,12 +37,91 @@ export default function Kegiatan() {
             <p className="text-sm opacity-70 leading-relaxed mb-8 flex-grow">
               {item.excerpt}
             </p>
-            <button className="text-sm font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all opacity-80 group-hover:opacity-100">
+            <button className="text-sm font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all opacity-80 group-hover:opacity-100 cursor-pointer">
               Baca Selengkapnya <span>→</span>
             </button>
           </motion.div>
         ))}
       </div>
+
+      {/* Detail Modal */}
+      <AnimatePresence>
+        {selectedKegiatan && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedKegiatan(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.9, y: 20, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-2xl bg-white text-brand-red rounded-[2.5rem] p-8 md:p-10 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
+            >
+              {/* Decorative background */}
+              <div className="absolute -top-16 -right-16 w-48 h-48 bg-brand-orange/5 rounded-full pointer-events-none"></div>
+
+              {/* Close Button */}
+              <button 
+                onClick={() => setSelectedKegiatan(null)}
+                className="absolute top-6 right-6 w-10 h-10 bg-gray-100 hover:bg-brand-red hover:text-white rounded-full flex items-center justify-center transition-colors cursor-pointer text-gray-500 shadow-md"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              {/* Category Badge */}
+              <span className="inline-flex items-center gap-1.5 text-xs font-black tracking-widest text-brand-orange bg-brand-orange/10 px-4 py-1.5 rounded-full mb-6 uppercase">
+                {selectedKegiatan.category}
+              </span>
+
+              {/* Title */}
+              <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight leading-none mb-6 pr-8">
+                {selectedKegiatan.title}
+              </h3>
+
+              {/* Meta Info */}
+              <div className="grid grid-cols-3 gap-2 border-t border-b border-gray-100 py-4 mb-6 text-xs md:text-sm text-gray-600 font-medium">
+                <div className="flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4 text-brand-orange shrink-0" />
+                  <span className="truncate">{selectedKegiatan.date}</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <User className="w-4 h-4 text-brand-orange shrink-0" />
+                  <span className="truncate">{selectedKegiatan.author}</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <Clock className="w-4 h-4 text-brand-orange shrink-0" />
+                  <span className="truncate">{selectedKegiatan.readTime}</span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="prose max-w-none text-gray-800 text-sm md:text-base leading-relaxed space-y-4">
+                <p className="font-semibold text-gray-700 italic border-l-4 border-brand-orange pl-4 mb-4">
+                  {selectedKegiatan.excerpt}
+                </p>
+                <p>
+                  {selectedKegiatan.content}
+                </p>
+              </div>
+
+              {/* Footer Close Button */}
+              <div className="mt-8 pt-6 border-t border-gray-100 flex justify-end">
+                <button 
+                  onClick={() => setSelectedKegiatan(null)}
+                  className="bg-brand-red text-white px-6 py-3 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-brand-orange transition-colors cursor-pointer shadow-lg"
+                >
+                  Tutup Berita
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
